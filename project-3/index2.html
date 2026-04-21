@@ -1,0 +1,58 @@
+#functional programming
+#map, filter, reduce
+#map(function, iterable)
+#filter(function, iterable)
+#reduce(function, iterable)
+from functools import reduce    
+
+def square(x):
+    return x*x
+def is_even(x):
+    return x%2==0
+def add(x,y):
+    return x+y  
+
+object oriented programming
+attributes,methods, classes, objects, inheritance, polymorphism, encapsulation, abstraction
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def greet(self):
+        return f"Hello, my name is {self.name} and I am {self.age} years old."
+class Student(Person):
+    def __init__(self,name,age,student_id):
+        super().__init__(name,age)
+        self.student_id=student_id
+    def greet(self):
+        return f"Hello, my name is {self.name}, I am {self.age} years old and my student ID is {self.student_id}."
+   <!-- class,object
+   class it is the blue print of the object;   general name
+   representaive of the object
+   object is the single attributes -->
+
+<!-- object is an instance of a class
+
+modular concept
+it is critical for fullstack and software development
+it is the process of breaking down a large program into smaller, manageable, and reusable pieces called
+
+pieces by piece
+it is good for manitablity and scalability
+
+modules. Each module is responsible for a specific functionality or feature of the program, and can be developed, tested, and maintained independently. Modular programming promotes code reusability, maintainability, and scalability, as it allows developers to focus on specific parts of the program without affecting the entire codebase. It also facilitates collaboration among developers, as different team members can work on different modules simultaneously. -->
+
+
+code resuablity,redudancy, maintainability, scalability, collaboration;
+
+modularity advantage is maintaince
+
+
+synchronization, code organization, code readability, code reusability, code maintainability, code scalability, code collaboration
+fast api
+
+
+ab.js and ab.mjs has the differece in the way they are imported and used in JavaScript.
+In JavaScript, the .js extension is typically used for regular JavaScript files that can be imported using the CommonJS module system (using require). On the other hand, the .mjs extension is used for JavaScript files that are intended to be imported using the ECMAScript module system (using import/export syntax).
+The main difference between the two is that .mjs files are treated as ES modules, which means they can use the import and export statements, while .js files are treated as CommonJS modules
+

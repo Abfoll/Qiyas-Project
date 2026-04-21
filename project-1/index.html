@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>In-call messages · Meeting chat panel</title>
+  <!-- Separate CSS file: index.css (linked below) -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting layout</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <main class="stage">
+      <div class="status-pill" aria-hidden="true">
+        <span class="pill-dots"><i></i><i></i><i></i><i></i></span>
+        <span>19</span>
+      </div>
+
+      <section class="meeting-shell" aria-label="Meeting screen">
+        <section class="tiles-grid" aria-label="Participants">
+          <article class="tile tile-olive span-5 tile-photo">
+            <span class="mute-icon">◔</span>
+            <span class="tile-avatar tile-photo-1"></span>
+            <span class="tile-label">Tinbite Yonas</span>
+          </article>
+          <article class="tile tile-purple span-5 tile-initial">
+            <span class="mute-icon">◔</span>
+            <span class="tile-avatar">M</span>
+            <span class="tile-label">Melat Mek</span>
+          </article>
+          <article class="tile tile-amber span-5 tile-initial tile-badge">
+            <span class="mute-icon">◔</span>
+            <span class="tile-avatar">K</span>
+            <span class="tile-label">Kaleab Kebede</span>
+          </article>
+          <article class="tile tile-magenta span-5 tile-initial">
+            <span class="mute-icon">◔</span>
+            <span class="tile-avatar">B</span>
+            <span class="tile-label">Bermabas Gezahegn</span>
+          </article>
+
+          <article class="tile tile-teal span-4 tile-initial">
+            <span class="mute-icon">◔</span>
+            <span class="tile-avatar">G</span>
+            <span class="tile-label">Game Bekana</span>
+          </article>
+          <article class="tile tile-rose span-4 tile-initial">
+            <span class="mute-icon">◔</span>
+            <span class="tile-avatar">A</span>
+            <span class="tile-label">Abdrezak Kemal</span>
+          </article>
+          <article class="tile tile-brown span-4 tile-photo tile-main">
+            <span class="mute-icon">◔</span>
+            <span class="tile-avatar tile-photo-2"></span>
+            <span class="tile-label">FraoIO (Main)</span>
+          </article>
+          <article class="tile tile-charcoal span-4 tile-group">
+            <span class="tile-avatar tile-overlap">
+              <i class="mini-avatar mini-green">Y</i>
+              <i class="mini-avatar mini-gray"></i>
+            </span>
+            <span class="tile-group-text">11 others</span>
+          </article>
+          <article class="tile tile-blue span-4 tile-photo tile-spotlight">
+            <span class="tile-avatar tile-photo-3"></span>
+            <span class="tile-label">Befkadu Belete</span>
+          </article>
+        </section>
+
+        <aside class="chat-panel" aria-label="In-call messages">
+          <header class="chat-header">
+            <h1>In-call messages</h1>
+            <button class="close-btn" type="button" aria-label="Close panel">×</button>
+          </header>
+
+          <div class="chat-controls">
+            <div class="send-toggle">
+              <span>Let participants send messages</span>
+              <span class="toggle-switch on"><span></span></span>
+            </div>
+
+            <div class="notice-card">
+              <div class="notice-title">Continuous chat is turned off</div>
+              <p>Messages will not be saved for meeting participants when the call ends. You can pin a message to make it visible for people who join later.</p>
+            </div>
+          </div>
+
+          <div class="messages-panel">
+            <article class="message-row">
+              <span class="message-avatar avatar-g">G</span>
+              <div class="message-body">
+                <div class="message-meta"><strong>Game Bekana</strong><time>5:46PM</time></div>
+                <div class="bubble">Natnael micun yzigalen!</div>
+              </div>
+            </article>
+
+            <article class="message-row">
+              <span class="message-avatar avatar-d">D</span>
+              <div class="message-body">
+                <div class="message-meta"><strong>Diana Luel</strong><time>6:09PM</time></div>
+                <div class="bubble">yelerem</div>
+              </div>
+            </article>
+
+            <article class="message-row">
+              <span class="message-avatar avatar-b">B</span>
+              <div class="message-body">
+                <div class="message-meta"><strong>Bermabas Gezahegn</strong><time>6:14PM</time></div>
+                <div class="bubble">computer</div>
+              </div>
+            </article>
+
+            <article class="message-row">
+              <span class="message-avatar avatar-d purple">D</span>
+              <div class="message-body">
+                <div class="message-meta"><strong>Demisew Temeslewel</strong><time>6:14PM</time></div>
+                <div class="bubble">computer</div>
+              </div>
+            </article>
+
+            <article class="message-row compact">
+              <span class="message-avatar avatar-d purple">D</span>
+              <div class="message-body">
+                <div class="message-meta"><strong>Demisew Temeslewel</strong><time>6:19PM</time></div>
+                <div class="bubble">not visible</div>
+              </div>
+            </article>
+
+            <div class="share-row">
+              <span class="share-ico">▣</span>
+              <span class="share-text">Share &quot;Education_and_Skills_for_Em...</span>
+            </div>
+
+            <footer class="composer">
+              <span>Send a message</span>
+              <button type="button" class="send-btn" aria-label="Send message"></button>
+            </footer>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </body>
+  </html>
+          <!-- optional icons, but keep minimal, photo has just text -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+```
