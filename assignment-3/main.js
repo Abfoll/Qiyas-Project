@@ -9,6 +9,8 @@
 
 import * as math from './math.js'; //name spacing
 
+console.log(math.middle(2, 4));
+console.log(math.middle(2, 3));
 console.log(math.sum(2, 3));
 console.log(math.product(2, 3));
 console.log(math.average(2, 3));

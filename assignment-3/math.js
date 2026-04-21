@@ -1,9 +1,5 @@
 import { middle } from './middle.js';
 
-console.log(middle(2, 4)); // Should return 3
-console.log(middle(2, 3)); // Should return null
-
-
 export const sum = (a, b) => {
     return a + b;
 }
@@ -25,3 +21,4 @@ export const multiply = (num) => {
 }   
 
 export const pi = 3.14159;
+export { middle };
