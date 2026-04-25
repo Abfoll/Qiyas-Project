@@ -128,3 +128,250 @@ counter(); // Output: 1
 counter(); // Output: 2
 counter(); // Output: 3     
 In this example, the inner function is a closure that has access to the count variable defined in the outer function. Each time the counter function is called, it increments the count variable and logs its value. Even though the outer function has finished executing, the inner function retains access to the count variable, allowing it to maintain state across multiple calls.       
+
+
+function is fundamental for node js
+
+nested function is a function that is defined inside another function. It can access variables and parameters of the outer function, and it can also be called from within the outer function. Nested functions are often used to create closures, which allow for data encapsulation and the ability to maintain state across multiple calls. They can also help to organize code and improve readability by grouping related functionality together.  
+function outer() {
+    let count = 0;
+    function inner() {
+        count++;
+        console.log(count);
+    }
+    inner(); // Call the inner function
+}   
+
+there are two types of variables
+1. Local variables: These are variables that are defined within a function and can only be accessed within that function. They are created when the function is called and destroyed when the function finishes executing. Local variables are not accessible outside of the function they are defined in.
+2. Global variables: These are variables that are defined outside of any function and can be accessed from anywhere in the code. They are created when the program starts and exist for the duration of the
+
+closer function:two types of variables
+inner and outer function
+
+function is fundamental for node js
+
+function outerFunction() {
+    console.log("This is the outer function.");
+    let outerVariable = "I am an outer variable";
+    
+    function innerFunction() {
+        let innerVariable = "I am an inner variable";
+        console.log(outerVariable); // Accessing outer variable
+        console.log(innerVariable); // Accessing inner variable
+    }
+    
+    return innerFunction; // Returning the inner function
+}
+
+closure example
+function makeCounter() {
+    let count = 0; // This variable is enclosed by the inner function
+    return function() {         
+        count++; // The inner function has access to the count variable
+        console.log(count);
+    }
+}
+
+closure malet ende aqerabi new mnmelketew  yehone neger yaqerbelenal
+
+type of functions
+1. Named functions: These are functions that have a specific name and can be called by that name. For example:
+function greet() {
+    console.log("Hello, world!");
+}       
+2. Anonymous functions: These are functions that do not have a name and are often used as arguments to other functions or assigned to variables. For example:
+const greet = function() {
+    console.log("Hello, world!");
+};     
+3. Arrow functions: These are a more concise syntax for writing functions in JavaScript. They                               
+are often used for shorter functions or when the function does not require its own this context. For example:
+const greet = () => {                   
+    console.log("Hello, world!");           
+};  
+
+closure function is  the a function that has access to its own scope, the scope of the outer function, and the global scope. It allows a function to access variables from an enclosing scope even after the outer function has finished executing. This is useful for creating private variables and functions, as well as for maintaining state in asynchronous programming. A closure is created when a function is defined inside another function and the inner function retains access to the variables of the outer function.    
+
+for example
+funcgtion f1() {
+    console.log("outer function");
+    function f2() {
+        console.log("inner function");
+    }
+    f2();
+}
+f1();
+
+the global function is f1 and the local function is f2  
+
+closure function on this example is f1 that returns f2 and f2 has access to the variable of f1 even after f1 has finished executing.    
+
+types of functions
+callback function is a function that is passed as an argument to another function and is executed after the completion of that function. It allows for asynchronous programming and is commonly used in JavaScript for handling events, making API calls, and performing tasks that require a delay or waiting for a response. Callback functions can be used to handle success or error scenarios, allowing developers to write more efficient and responsive code.
+nested function is a function that is defined inside another function. It can access variables and parameters of the outer function, and it can also be called from within the outer function. Nested functions are often used to create closures, which allow for data encapsulation and the ability to maintain state across multiple calls. They can also help to organize code and improve readability by grouping related functionality together.
+closure function is a function that has access to its own scope, the scope of the outer function, and the global scope. It allows a function to access variables from an enclosing scope even after the outer function has finished executing. This is useful for creating private variables and functions, as well as for maintaining state in asynchronous programming. A closure is created when a function is defined inside another function and the inner function retains access to the variables of the outer function.
+
+
+closure function is a function that has to return a function and the inner function has access to the variable of the outer function even after the outer function has finished executing.  
+
+express function is a function that is defined and assigned to a variable. It can be anonymous or named, and it can be used as a callback function or passed as an argument to other functions. Express functions are commonly used in JavaScript for handling events, making API calls, and performing tasks that require a delay or waiting for a response. They provide a more concise syntax for defining functions and can help improve code readability.
+for example 
+const greet = function() {
+    console.log("Hello, world!");
+};
+greet(); // Output: Hello, world!
+
+
+expression function lay const new mexqem minchilew not let
+let mexqem anchilim
+
+anonymous function is afunction without name and it is often used as an argument to other functions or assigned to variables. For example:
+const greet = function() {
+    console.log("Hello, world!");
+};
+greet(); // Output: Hello, world!
+
+arrow function is a more concise syntax for writing functions in JavaScript. They are often used for shorter functions or when the function does not require its own this context. For example:
+const greet = () => {
+    console.log("Hello, world!");
+};
+greet(); // Output: Hello, world!   
+
+closure can be callback but callback cannot be closure
+closure function is a function that has access to its own scope, the scope of the outer function
+, and the global scope. It allows a function to access variables from an enclosing scope even after the outer function has finished executing. This is useful for creating private variables and functions, as well as for maintaining state in asynchronous programming. A closure is created when a function is defined inside another function and the inner function retains access to the variables of the outer function.
+
+higher order function is a function that takes one or more functions as arguments and/or returns a function as its result. Higher-order functions are a fundamental concept in functional programming and are used to create more flexible and reusable code. They allow for the manipulation of functions as first-class citizens, enabling developers to create functions that can operate on other functions, such as map, filter, and reduce in JavaScript. Higher-order functions can be used to abstract away common patterns of code, making it easier to write and maintain complex logic.      
+callStack is a data structure that keeps track of the function calls in a program. It is used to manage the execution of functions and to keep track of the order in which they are called. When a function is called, it is added to the call stack, and when it finishes executing, it is removed from the stack. The call stack allows for nested function calls and helps to manage the flow of execution in a program. If the call stack exceeds its limit, it can lead to a stack overflow error. 
+
+infinite loop is a loop that continues to execute indefinitely because the terminating condition is never met. This can occur when the loop's condition is always true or when there is no condition at all. Infinite loops can cause a program to become unresponsive and may lead to crashes or other unintended consequences. It is important to ensure that loops have a proper terminating condition to avoid infinite loops in programming.
+
+infinite loop = recursive
+
+fibonnic series terminates yehone bota lay gin mnxeqemew be recursive function
+function fibonacci(n) {
+    if (n <= 1) {
+        return n;
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}           
+
+pure and impure function reading assignment
+
+
+immpediate invoked function expression (IIFE) is a JavaScript function that is executed immediately after it is defined. It is a design pattern that allows for the creation of a new scope, which can help to avoid polluting the global namespace and can also be used to create private variables and functions. An IIFE is typically defined using an anonymous function and is wrapped in parentheses to ensure that it is treated as an expression. For example:
+(function() {
+    console.log("This is an IIFE!");
+})(); // Output: This is an IIFE!       
+
+
+Define at the same time and call at the same time   
+immediate invoked function expression (IIFE) is a JavaScript function that is executed immediately after it is defined. It is a design pattern that allows for the creation of a new scope, which can help to avoid polluting the global namespace and can also be used to create private variables and functions. An IIFE is typically defined using an anonymous function and is wrapped in parentheses to ensure that it is treated as an expression. For example:
+(function() {
+    console.log("This is an IIFE!");
+})(); // Output: This is an IIFE!   
+
+IIFE is used to create a new scope and avoid polluting the global namespace. It can also be used to create private variables and functions that are not accessible from outside the IIFE. This can help to prevent naming conflicts and improve code organization. Additionally, IIFEs can be used to execute code immediately without having to call a function separately, which can be useful for initializing variables or setting up event listeners.  
+
+
+interview question
+1. What is a closure in JavaScript and how does it work?
+2. Can you explain the difference between a callback function and a closure function?
+3. How do you create a higher-order function in JavaScript?
+4. What is the call stack and how does it relate to function execution in JavaScript?
+5. Can you provide an example of an infinite loop and explain how to avoid it?
+6. What is the Fibonacci series and how can it be implemented using a recursive function?
+7. What is the difference between pure and impure functions in JavaScript?
+8. Can you explain what an Immediately Invoked Function Expression (IIFE) is and provide an example of its usage?
+9. How do you handle asynchronous operations in JavaScript using promises?
+10. Can you explain the concept of modular programming and how it can be implemented in JavaScript? 
+
+
+promise is a JavaScript object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows developers to write cleaner and more readable code when dealing with asynchronous tasks, such as making API calls or handling events. Promises can be in one of three states: pending, fulfilled, or rejected. They provide methods like .then() and .catch() to handle the resolved value or any errors that may occur during the asynchronous operation. Promises help to avoid callback hell and make it easier to manage asynchronous code in JavaScript.
+
+promise on API
+When making API calls in JavaScript, promises are often used to handle the asynchronous nature of the request. When you make an API call, it typically returns a promise that represents the eventual completion of the request. You can use the .then() method to handle the resolved value of the promise, which is usually the response from the API. For example:
+fetch('https://api.example.com/data')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })  .catch(error => {
+        console.error('Error:', error);
+    }); 
+
+In this example, the fetch function returns a promise that resolves with the response from the API. The first .then() method is used to parse the response as JSON, and the second .then() method is used to handle the parsed data. If there is an error during the API call or while processing the response, the .catch() method will handle it. This approach allows for cleaner and more manageable code when working with asynchronous API calls in JavaScript.           
+
+what is promise in JavaScript?
+A promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It allows developers to write cleaner and more readable code when dealing with asynchronous tasks, such as making API calls or handling events. Promises can be in one of three states: pending, fulfilled, or rejected. They provide methods like .then() and .catch()
+    to handle the resolved value or any errors that may occur during the asynchronous operation. Promises help to avoid callback hell and make it easier to manage asynchronous code in JavaScript.
+
+    promise has three states pending, fulfilled, rejected
+    promise is an object 
+    object is json like structure
+    promise is used to handle asynchronous operations in JavaScript
+    promise is used to avoid callback hell and make it easier to manage asynchronous code in JavaScript 
+
+    object : key value pair
+    json : JavaScript Object Notation
+    json is a data format that is used to represent data in a structured way. It is based on a subset of the JavaScript programming language and is commonly used for transmitting data in web applications. JSON is easy to read and write for humans, and it is also easy to parse and generate
+    for machines. JSON is often used to exchange data between a server and a client, and it can be used to represent complex data structures such as arrays and objects. JSON is a popular choice for data interchange because of its simplicity and compatibility with many programming languages.     
+
+
+    promise chain 
+    be promise chaining, we can chain multiple .then() methods together to handle a sequence of asynchronous operations. Each .then() method returns a new promise, allowing us to perform additional operations on the resolved value from the previous promise. This helps to avoid callback hell and makes it easier to manage complex asynchronous code. For example:
+fetch('https://api.example.com/data')
+    .then(response => response.json())          
+    .then(data => {
+        console.log(data);
+        return fetch('https://api.example.com/other-data');
+    })
+    .then(response => response.json())
+    .then(otherData => {    
+        console.log(otherData);
+    })
+    .catch(error => {                       
+        console.error('Error:', error);
+    });
+
+
+    async and wait is a syntax in JavaScript that allows developers to write asynchronous code in a more synchronous and readable manner. The async keyword is used to declare a function as asynchronous, and the await keyword is used to pause the execution of the function until a promise is resolved. This allows developers to write code that looks and behaves like synchronous code, while still being able to handle asynchronous operations such as API calls or timeouts. For example:
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();     
+        console.log(data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+fetchData();    
+
+catach all always one error 
+nested promise is a promise that is returned from another promise. It allows for chaining multiple asynchronous operations together, where each operation depends on the result of the previous one. This can lead to a more complex and nested structure of promises, which can be difficult to manage and read. To avoid this, it is often recommended to use async/await syntax or to flatten the promise chain using .then() methods. For example:
+fetch('https://api.example.com/data')
+    .then(response => response.json())          
+    .then(data => {
+        console.log(data);
+        return fetch('https://api.example.com/other-data');
+    })  
+
+
+    parallel progrmming and inparallel programming
+Parallel programming is a programming paradigm that allows for the simultaneous execution of multiple tasks or processes. It        
+can be achieved through the use of multiple processors or cores, and it is often used to improve the performance of computationally intensive tasks. In parallel programming, tasks are divided into smaller sub-tasks that can be executed concurrently, allowing for faster processing and improved efficiency. This approach is commonly used in scientific computing, data analysis, and other applications that require high performance.          
+In contrast, in parallel programming, tasks are executed sequentially, one after the other. This approach is simpler to implement and can be sufficient for tasks that do not require high performance or that have dependencies between tasks. However, it may not be suitable for computationally intensive tasks or those that can benefit from concurrent execution. In parallel programming, the focus is on maximizing performance and efficiency by leveraging multiple processors or cores, while in in parallel programming, the focus is on simplicity and ease of implementation.    
+
+parallel andu andun ayxebeqim 
+hulutum beyrasachew new run miyadergute
+async is parallel programming and wait is in parallel programming
+async wait is a promise and has three states pending, fulfilled, rejected
+
+try and catch is a JavaScript statement that allows developers to handle errors in a structured way. The try block contains code that may throw an error, while the catch block contains code that will be executed if an error occurs in the try block. This allows developers to gracefully handle errors and prevent them from crashing the program. For example:
+try {
+    // Code that may throw an error
+    const result = someFunction();
+    console.log(result);
+} catch (error) {
+    // Code to handle the error
+    console.error('An error occurred:', error);
+}   

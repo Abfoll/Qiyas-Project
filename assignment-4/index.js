@@ -11,7 +11,7 @@ greetUser("Alice", showWelcomeMessage);
 
 greetUser("Alice", () => {
     console.log("Callback executed!");
-});
+});AB Marshal Boot Camp Class.rar
 
 function multiply(a, b, callback) {
     const result = a * b;
