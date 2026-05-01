@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Library",
+    "author": "Maya Hart",
+    "category": "Fiction",
+    "quantity": 8
+  },
+  {
+    "id": 2,
+    "title": "Node.js Essentials",
+    "author": "Avery Stone",
+    "category": "Technology",
+    "quantity": 5
+  },
+  {
+    "id": 3,
+    "title": "Designing Calm Spaces",
+    "author": "Rina Patel",
+    "category": "Design",
+    "quantity": 3
+  }
+]

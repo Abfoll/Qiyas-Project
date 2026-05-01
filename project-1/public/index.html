@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Book Management System</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-shell">
+      <div class="topbar">
+        <a class="brand" href="/">
+          <div class="brand-mark">LB</div>
+          <div class="brand-copy">
+            Library Books
+            <span>Management System</span>
+          </div>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a class="active" href="/">Book List</a>
+          <a href="/features.html">Features</a>
+          <a href="/about.html">About Us</a>
+          <a href="/contact.html">Contact Us</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-shell page">
+    <section class="hero">
+      <article class="hero-panel">
+        <span class="eyebrow">Library Workflow</span>
+        <h1>Track every book with a clean, responsive library dashboard.</h1>
+        <p>
+          Add, update, search, and remove books from one simple workspace designed for real library use.
+          The layout stays comfortable on mobile, tablet, and desktop screens.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" data-open-add-modal>Add New Book</button>
+          <a class="btn btn-secondary" href="/features.html">View Features</a>
+        </div>
+      </article>
+
+      <aside class="hero-visual">
+        <span class="pill">Built with HTML, CSS, and Node.js</span>
+        <h2>Fast book management for a calm library experience.</h2>
+        <p class="muted">A focused interface for keeping titles, authors, categories, and quantities organized.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong data-book-count>0</strong>
+            <span class="muted">Books currently tracked</span>
+          </div>
+          <div class="stat">
+            <strong>4</strong>
+            <span class="muted">Core pages included</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel">
+      <div class="page-head">
+        <div>
+          <span class="eyebrow">Book List Page</span>
+          <h2>All Books</h2>
+          <p class="section-lead">Search the collection, add a book, or edit the existing inventory in seconds.</p>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <label class="search" aria-label="Search books">
+          <span>⌕</span>
+          <input type="search" placeholder="Search by title, author, or category" data-search-books>
+        </label>
+        <button class="btn btn-primary" type="button" data-open-add-modal>Add Book</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody data-book-table-body></tbody>
+        </table>
+      </div>
+
+      <div class="notice" data-notice hidden></div>
+      <p class="muted" data-empty-state hidden style="margin-top:16px;">No books match your search. Try a different keyword or add a new record.</p>
+    </section>
+  </main>
+
+  <div class="modal" data-book-modal aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="bookFormTitle">
+      <div class="modal-head">
+        <div>
+          <span class="eyebrow">Book Entry</span>
+          <h2 id="bookFormTitle" data-modal-title>Add New Book</h2>
+        </div>
+        <button class="close-btn" type="button" aria-label="Close dialog" data-close-modal>&times;</button>
+      </div>
+
+      <form class="page-grid" data-book-form>
+        <input type="hidden" data-editing-id>
+        <div class="field-grid">
+          <div class="field">
+            <label for="title">Title</label>
+            <input id="title" name="title" type="text" placeholder="Enter book title" required>
+          </div>
+          <div class="field">
+            <label for="author">Author</label>
+            <input id="author" name="author" type="text" placeholder="Enter author name" required>
+          </div>
+          <div class="field">
+            <label for="category">Category</label>
+            <input id="category" name="category" type="text" placeholder="Fiction, Science, History..." required>
+          </div>
+          <div class="field">
+            <label for="quantity">Quantity</label>
+            <input id="quantity" name="quantity" type="number" min="0" step="1" placeholder="0" required>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit" data-submit-button>Add Book</button>
+          <button class="btn btn-secondary" type="button" data-close-modal>Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-shell">
+      <div class="footer-card">
+        Library Book Management System - responsive HTML, CSS, and Node.js project for tracking books efficiently.
+      </div>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "library-book-management-system",
+  "version": "1.0.0",
+  "description": "Responsive library book management system built with Node.js, HTML, and CSS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
