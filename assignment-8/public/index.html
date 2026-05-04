@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 8 - Express Lists</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>User and Product Dashboard</h1>
+        <p>Counts, pagination, and product filtering with Express.js</p>
+      </header>
+
+      <section class="stats">
+        <article class="card">
+          <h2>Total Users</h2>
+          <p id="totalUsers">0</p>
+        </article>
+        <article class="card">
+          <h2>Total Products</h2>
+          <p id="totalProducts">0</p>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Users</h2>
+          <span id="usersMeta" class="meta"></span>
+        </div>
+        <ul id="userList" class="list"></ul>
+        <div class="pager">
+          <button id="usersPrev">Previous</button>
+          <span id="usersPageInfo">Page 1</span>
+          <button id="usersNext">Next</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2>Products</h2>
+          <span id="productsMeta" class="meta"></span>
+        </div>
+
+        <form id="productFilterForm" class="filters">
+          <label>
+            Type
+            <select id="typeFilter" name="type">
+              <option value="">All</option>
+              <option value="electronics">Electronics</option>
+              <option value="stationery">Stationery</option>
+              <option value="fashion">Fashion</option>
+              <option value="home">Home</option>
+            </select>
+          </label>
+
+          <label>
+            Min Price
+            <input id="minPriceFilter" name="minPrice" type="number" min="0" step="100" placeholder="0" />
+          </label>
+
+          <label>
+            Max Price
+            <input id="maxPriceFilter" name="maxPrice" type="number" min="0" step="100" placeholder="10000" />
+          </label>
+
+          <button type="submit">Apply Filters</button>
+          <button type="button" id="clearFilters">Clear</button>
+        </form>
+
+        <ul id="productList" class="list"></ul>
+        <div class="pager">
+          <button id="productsPrev">Previous</button>
+          <span id="productsPageInfo">Page 1</span>
+          <button id="productsNext">Next</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
