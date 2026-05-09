@@ -7,7 +7,12 @@ import { userValidationSchema } from "../utils/schema/userValidation.js";
 
 const  userRoute  =  Router();
 
+//Step One
 userRoute.get("/api/users", (request, response) => {
+  // Require an authenticated session to list users
+  if (!request.session || !request.session.user) {
+    return response.status(401).send({ message: "Unauthorized" });
+  }
   return response.send(userList);
 });
 
