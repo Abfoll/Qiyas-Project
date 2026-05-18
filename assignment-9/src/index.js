@@ -3,54 +3,36 @@ import routerList from "./routers/index.js";
 import { logingMiddleware as loginMiddleware } from "./utils/middlewares.js";
 import session from "express-session";
 import cookieParser from "cookie-parser";
-import getRawBody from "raw-body";
 import { userList } from "./utils/userList.js";
 import Passport from "passport";
 import "./auth/local-auth.js";  
+import mongoose from "mongoose";
+import dbConnection from "./db.js";
 
 
 const app = express();
 const isProduction = process.env.NODE_ENV === "production";
 
 app.use(cookieParser());
+app.use(express.json());
 
-// Lenient JSON parser: read raw body and attempt to parse, including
-// double-encoded JSON strings ("\"{...}\""). We avoid `express.json()`
-// because we need to inspect the raw payload.
-app.use(async (req, res, next) => {
-  if (!req.headers['content-type'] || !req.headers['content-type'].includes('application/json')) {
-    return next();
-  }
+const dbConnected = await dbConnection();
+if (dbConnected) {
+  console.log("✅ MongoDB connection established (index)");
+} else {
+  console.log("⚠️ MongoDB not available — running without DB");
+}
 
-  try {
-    const len = req.headers['content-length'] ? parseInt(req.headers['content-length'], 10) : undefined;
-    const str = await getRawBody(req, { length: len, encoding: 'utf8' });
-    if (!str) {
-      req.body = {};
-      return next();
-    }
-
+// Normalize the parsed body for JSON string payloads, if any.
+app.use((req, _res, next) => {
+  if (typeof req.body === "string") {
     try {
-      const parsed = JSON.parse(str);
-      if (typeof parsed === 'string') {
-        // double-encoded JSON string: try parse again
-        try {
-          req.body = JSON.parse(parsed);
-        } catch (_) {
-          req.body = parsed;
-        }
-      } else {
-        req.body = parsed;
-      }
-      return next();
-    } catch (err) {
-      err.status = 400;
-      err.message = `Invalid JSON payload: ${err.message}`;
-      return next(err);
+      req.body = JSON.parse(req.body);
+    } catch {
+      // Keep the string body as-is if it is not nested JSON.
     }
-  } catch (err) {
-    return next(err);
   }
+  next();
 });
 
 app.use(
@@ -104,13 +86,17 @@ app.get("/api/auth/login", (_req, res) => {
 app.post("/api/auth/login", (req, res) => {
   const { username, password } = req.body || {};
 
+  console.log(`Login attempt for user: ${username}`);
+
   const userFind = userList.find((user) => user.username === username);
 
   if (!userFind || userFind.password !== password) {
+    console.log(`Login failed for user: ${username}`);
     return res.status(401).send({ message: "Not authorized" });
   }
 
   req.session.user = username;
+  console.log(`Login successful for user: ${username}`);
 
   return res.status(200).send({ message: "Login successful", session: req.session });
 });
